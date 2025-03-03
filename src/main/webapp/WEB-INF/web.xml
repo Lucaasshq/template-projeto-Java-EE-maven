@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+  <display-name>maratona-jsf</display-name>
+	
+	
+
+	<!-- Mapeamento de URLs para serem processadas pelo Faces Servlet -->
+	<servlet-mapping>
+		<servlet-name>Faces Servlet</servlet-name>
+		<!-- Extensao de arquivos associada ao servlet -->
+		<url-pattern>*.xhtml</url-pattern>
+	</servlet-mapping>
+	
+	
+	<!-- Configuracao do Faces Servlet para processar requisicoes JSF -->
+	<servlet>
+		<!-- Nome do servlet -->
+		<servlet-name>Faces Servlet</servlet-name>
+		<!-- Classe responsavel pelo processamento das requisicoes JSF -->
+		<servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
+		<!-- Prioridade de inicializacao do servlet no servidor -->
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	
+		
+	<welcome-file-list>
+        <welcome-file>index.xhtml</welcome-file>
+    </welcome-file-list>
+	
+	
+</web-app>
